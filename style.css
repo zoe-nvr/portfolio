@@ -62,3 +62,10 @@ footer {
   text-align: center;
   padding: 1em;
 }
+h3 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: fit-content;
+}
