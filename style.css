@@ -1,0 +1,64 @@
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --brown: #8B4513;
+  --orange: #FFA500;
+  --green: #228B22;
+}
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: var(--white);
+  color: var(--black);
+}
+
+header {
+  background-color: var(--brown);
+  color: var(--white);
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  margin-left: 1em;
+  color: var(--white);
+  text-decoration: none;
+}
+
+section {
+  padding: 2em;
+}
+
+.project {
+  background-color: var(--green);
+  color: var(--white);
+  padding: 1em;
+  margin: 1em 0;
+}
+
+form input,
+form textarea {
+  display: block;
+  margin-bottom: 1em;
+  padding: 0.5em;
+  width: 100%;
+  max-width: 500px;
+}
+
+button {
+  background-color: var(--orange);
+  color: var(--white);
+  border: none;
+  padding: 0.5em 1em;
+  cursor: pointer;
+}
+
+footer {
+  background-color: var(--black);
+  color: var(--white);
+  text-align: center;
+  padding: 1em;
+}
