@@ -86,3 +86,24 @@ h3 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.collapsible {
+  background-color: #f0e3d6; 
+  color: #800020;           
+  cursor: pointer;
+  padding: 10px 20px;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 1.1em;
+  border-radius: 5px;
+  width: 200px;
+}
+
+.content {
+  padding: 10px 20px;
+  border-left: 2px solid #800020;
+  margin-top: 5px;
+  width: 200px;
+  background-color: #fff;
+  border-radius: 0 0 5px 5px;
+}
