@@ -61,7 +61,7 @@ footer {
   padding: 1em;
 }
 
-h3 {
+.collapsible {
   display: block;
   margin-left: auto;
   margin-right: auto;
