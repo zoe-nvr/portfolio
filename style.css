@@ -115,3 +115,6 @@ footer {
   margin-top: 5px;
   border-radius: 0 0 4px 4px;
 }
+.center-text {
+  text-align: center;
+}
