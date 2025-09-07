@@ -118,3 +118,17 @@ footer {
 .center-text {
   text-align: center;
 }
+.image-square {
+  display: flex;
+  flex-wrap: wrap;      
+  max-width: 600px;    
+  margin: 0 auto;      
+  gap: 10px;            
+}
+
+.image-square img {
+  width: calc(50% - 10px);  
+  height: auto;
+  object-fit: cover;        
+  border-radius: 8px;        
+}
