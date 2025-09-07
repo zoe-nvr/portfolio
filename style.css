@@ -1,14 +1,14 @@
 :root {
   --white: #F0EAD6;
   --black: #000000;
-  --red: #800020;
+  --red: #800020; 
 }
 
 body {
-  margin: 0;
-  font-family: 'Didot', sans-serif;
   background-color: var(--white);
   color: var(--red);
+  margin: 0;
+  font-family: 'Didot', sans-serif;
 }
 
 header {
