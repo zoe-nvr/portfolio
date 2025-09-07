@@ -132,6 +132,15 @@ footer {
   object-fit: cover;
   border-radius: 8px;
 }
+.image-square img {
+  transition: transform 0.3s ease;
+  cursor: pointer; /* Optional: show pointer on hover */
+}
+
+.image-square img:hover {
+  transform: scale(1.05); /* Zoom in 5% */
+}
+
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
