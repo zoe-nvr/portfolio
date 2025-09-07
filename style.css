@@ -1,7 +1,7 @@
 :root {
   --white: #F0EAD6;
   --black: #000000;
-  --red: ##800020;
+  --red: #800020;
 }
 
 body {
@@ -22,7 +22,7 @@ header {
 
 nav a {
   margin-left: 1em;
-  color: var(--white);
+  color: var(--red);
   text-decoration: none;
 }
 
