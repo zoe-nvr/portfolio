@@ -107,3 +107,11 @@ footer {
   background-color: #fff;
   border-radius: 0 0 5px 5px;
 }
+.content {
+  display: none; 
+  padding: 0 18px;
+  overflow: hidden;
+  background-color: #f1f1f1;
+  margin-top: 5px;
+  border-radius: 0 0 4px 4px;
+}
