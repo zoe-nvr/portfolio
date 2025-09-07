@@ -134,11 +134,11 @@ footer {
 }
 .image-square img {
   transition: transform 0.3s ease;
-  cursor: pointer; /* Optional: show pointer on hover */
+  cursor: pointer; 
 }
 
 .image-square img:hover {
-  transform: scale(1.05); /* Zoom in 5% */
+  transform: scale(1.05); 
 }
 
 @keyframes fadeIn {
