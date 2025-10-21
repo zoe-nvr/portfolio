@@ -3,29 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
+  <title>Zoé Navarro - Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div id="background-blur"></div>
-
   <header>
-    <h1>My Portfolio</h1>
+    <h1>Zoé Navarro</h1>
     <nav>
-      <a href="#" data-section="home">Home</a>
-      <a href="#" data-section="production">Production Manager</a>
-      <a href="#" data-section="script">Script</a>
-      <a href="#" data-section="camera">Assistant Camera</a>
-      <a href="#" data-section="art">Art Director</a>
-      <a href="#" data-section="actress">Actress</a>
-      <a href="#" data-section="contact">Contact</a>
+      <button data-target="home">About</button>
+      <button data-target="projects">Projects</button>
+      <button data-target="contact">Contact</button>
     </nav>
   </header>
 
   <main>
     <!-- HOME -->
     <section id="home" class="page active">
-      <h2>Welcome</h2>
+      <h2>About Me</h2>
       <p>Hello! I'm Zoé Navarro, a young cinematographer based in Montreal.</p>
       <div class="image-grid">
         <img src="IMG_1.HEIC" alt="Photo 1">
@@ -35,63 +29,86 @@
       </div>
     </section>
 
-    <!-- PRODUCTION -->
-    <section id="production" class="page hidden">
-      <div class="content">
-        <h2>Production Manager</h2>
-        <p>Write your text here...</p>
+    <!-- PROJECTS -->
+    <section id="projects" class="page">
+      <h2>Projects</h2>
+      <div class="project-grid">
+        <button class="project-btn" data-target="production">Production Manager</button>
+        <button class="project-btn" data-target="script">Script</button>
+        <button class="project-btn" data-target="camera">Assistant Camera</button>
+        <button class="project-btn" data-target="artdirector">Art Director</button>
+        <button class="project-btn" data-target="assistantart">Ass. Art Director</button>
+        <button class="project-btn" data-target="director">Director</button>
+        <button class="project-btn" data-target="actress">Actress</button>
+        <button class="project-btn" data-target="foley">Foley Artist</button>
+        <button class="project-btn" data-target="assdirector">Ass. Director</button>
       </div>
-      <button class="back-btn" data-back="home">← Back</button>
-    </section>
-
-    <!-- SCRIPT -->
-    <section id="script" class="page hidden">
-      <div class="content">
-        <h2>Script</h2>
-        <p>Write your text here...</p>
-      </div>
-      <button class="back-btn" data-back="home">← Back</button>
-    </section>
-
-    <!-- CAMERA -->
-    <section id="camera" class="page hidden">
-      <div class="content">
-        <h2>Assistant Camera</h2>
-        <p>Write your text here...</p>
-      </div>
-      <button class="back-btn" data-back="home">← Back</button>
-    </section>
-
-    <!-- ART -->
-    <section id="art" class="page hidden">
-      <div class="content">
-        <h2>Art Director</h2>
-        <p>Write your text here...</p>
-      </div>
-      <button class="back-btn" data-back="home">← Back</button>
-    </section>
-
-    <!-- ACTRESS -->
-    <section id="actress" class="page hidden">
-      <div class="content">
-        <h2>Actress</h2>
-        <p>Write your text here...</p>
-      </div>
-      <button class="back-btn" data-back="home">← Back</button>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="page hidden">
-      <div class="content">
-        <h2>Contact</h2>
-        <form action="https://formspree.io/f/xkgvkjla" method="POST" class="contact-form">
-          <input type="text" name="name" placeholder="Your Name" required />
-          <input type="email" name="email" placeholder="Your Email" required />
-          <textarea name="message" placeholder="Your Message" required></textarea>
-          <button type="submit" class="send-btn">Send</button>
-        </form>
-      </div>
-      <button class="back-btn" data-back="home">← Back</button>
+    <section id="contact" class="page">
+      <h2>Contact</h2>
+      <form action="https://formspree.io/f/xkgvkjla" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+
+    <!-- SUBPAGES -->
+    <section id="production" class="subpage">
+      <button class="back-btn">← Back</button>
+      <h2>Production Manager</h2>
+      <p>production manager on the short film: "Between the Silence and the Noise", by Sara Balkis - @2025</p>
+    </section>
+
+    <section id="script" class="subpage">
+      <button class="back-btn">← Back</button>
+      <h2>Script</h2>
+      <p>Script on the short film: "Biscuit Chinois", by Justin Genest - @2025</p>
+    </section>
+
+    <section id="camera" class="subpage">
+      <button class="back-btn">← Back</button>
+      <h2>Assistant Camera</h2>
+      <p>Assistant Camera on the short film: "Affaire Sabrina Baptiste", by Emily Badet - @2025</p>
+    </section>
+
+    <section id="artdirector" class="subpage">
+      <button class="back-btn">← Back</button>
+      <h2>Art Director</h2>
+      <p>Art director on the short film: "Dark Horse", by Rayane Benzida - @2025</p>
+    </section>
+
+    <section id="assistantart" class="subpage">
+      <button class="back-btn">← Back</button>
+      <h2>Assistant Art Director</h2>
+      <p>Assistant Art Director on the short film: "Street Boy", by François Dubé - @2024</p>
+    </section>
+
+    <section id="director" class="subpage">
+      <button class="back-btn">← Back</button>
+      <h2>Director</h2>
+      <p>Director of the short films "Memento Vivere", "How it Feels", and "Heal and Rise".</p>
+    </section>
+
+    <section id="actress" class="subpage">
+      <button class="back-btn">← Back</button>
+      <h2>Actress</h2>
+      <p>Lead roles in "28 degrés sous la lune", "We Were Girls Together", and more.</p>
+    </section>
+
+    <section id="foley" class="subpage">
+      <button class="back-btn">← Back</button>
+      <h2>Foley Artist</h2>
+      <p>Foley Artist on "Between the Silence and the Noise" - @2025</p>
+    </section>
+
+    <section id="assdirector" class="subpage">
+      <button class="back-btn">← Back</button>
+      <h2>Assistant Director</h2>
+      <p>Assistant Director on a studio light project - @2024</p>
     </section>
   </main>
 
