@@ -1,45 +1,33 @@
-const links = document.querySelectorAll("nav a");
+const navButtons = document.querySelectorAll("nav button");
 const pages = document.querySelectorAll(".page");
+const subpages = document.querySelectorAll(".subpage");
+const projectButtons = document.querySelectorAll(".project-btn");
 const backButtons = document.querySelectorAll(".back-btn");
-const bgBlur = document.getElementById("background-blur");
 
-function showPage(id) {
-  // Start cinematic blur
-  bgBlur.style.opacity = "1";
-  bgBlur.style.backdropFilter = "blur(20px) brightness(80%)";
-  bgBlur.style.transform = "scale(1.05)";
+navButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    const target = btn.dataset.target;
+    pages.forEach(p => p.classList.remove("active"));
+    subpages.forEach(s => s.classList.remove("active"));
+    document.getElementById(target).classList.add("active");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+});
 
-  setTimeout(() => {
-    pages.forEach(page => {
-      if (page.id === id) {
-        page.classList.add("active");
-        page.classList.remove("hidden");
-      } else {
-        page.classList.remove("active");
-        page.classList.add("hidden");
-      }
-    });
-
-    // End blur smoothly
-    setTimeout(() => {
-      bgBlur.style.opacity = "0";
-      bgBlur.style.backdropFilter = "blur(0px) brightness(100%)";
-      bgBlur.style.transform = "scale(1)";
-    }, 500);
-  }, 300);
-}
-
-links.forEach(link => {
-  link.addEventListener("click", e => {
-    e.preventDefault();
-    const target = e.target.dataset.section;
-    showPage(target);
+projectButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    const target = btn.dataset.target;
+    pages.forEach(p => p.classList.remove("active"));
+    subpages.forEach(s => s.classList.remove("active"));
+    document.getElementById(target).classList.add("active");
+    window.scrollTo({ top: 0, behavior: "smooth" });
   });
 });
 
 backButtons.forEach(btn => {
   btn.addEventListener("click", () => {
-    const target = btn.dataset.back;
-    showPage(target);
+    subpages.forEach(s => s.classList.remove("active"));
+    document.getElementById("projects").classList.add("active");
+    window.scrollTo({ top: 0, behavior: "smooth" });
   });
 });
