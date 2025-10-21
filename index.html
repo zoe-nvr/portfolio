@@ -1,135 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <style>
-  h1 {
-    color: red !important;
-  }
-</style>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div id="background-blur"></div>
+
   <header>
     <h1>My Portfolio</h1>
     <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-      <a href="#collaboration opportunities">Collaboration Opportunities</a>
+      <a href="#" data-section="home">Home</a>
+      <a href="#" data-section="production">Production Manager</a>
+      <a href="#" data-section="script">Script</a>
+      <a href="#" data-section="camera">Assistant Camera</a>
+      <a href="#" data-section="art">Art Director</a>
+      <a href="#" data-section="actress">Actress</a>
+      <a href="#" data-section="contact">Contact</a>
     </nav>
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <div class="image-square">
-    <img src="IMG_1.HEIC" alt="Photo of me" class="about-photo" />
-    <img src="IMG_2.HEIC" alt="Photo of me" class="about-photo" />
-    <img src="IMG_3.JPG" alt="Photo of me" class="about-photo" />
-    <img src="IMG_4.JPG" alt="Photo of me" class="about-photo" />
-    <p>Hello! I'm Zoé Navarro, a young cinematographer based in montreal.</p>
-  </section>
+  <main>
+    <!-- HOME -->
+    <section id="home" class="page active">
+      <h2>Welcome</h2>
+      <p>Hello! I'm Zoé Navarro, a young cinematographer based in Montreal.</p>
+      <div class="image-grid">
+        <img src="IMG_1.HEIC" alt="Photo 1">
+        <img src="IMG_2.HEIC" alt="Photo 2">
+        <img src="IMG_3.JPG" alt="Photo 3">
+        <img src="IMG_4.JPG" alt="Photo 4">
+      </div>
+    </section>
 
-  <section id="projects">
-   <p style="text-align: center;">
-  <h2>Projects</h2>
-</p> 
-    <div class="project">
-     <h3>Film Production</h3>
-      <p>A short description of your project.</p>
-    </div>
-  </section>
-<div class="collapsible-container">
-  <button class="collapsible">Production Manager</button>
-  <div class="content">
-    <p class="center-text">
-     production manager on the short film : "Between the Silence and the Noise", by Sara Balkis - @2025
-</p>
-  </div>
-</div>
-   <div class="collapsible-container">
-    <button class="collapsible">Script</button>
-    <div class="content">
-      <p class="center-text">
-        Script on the short film : "Biscuit Chinois", by Justin Genest - @2025</p>
-  </div>
-</div>
-  <div class="collapsible-container">
-    <button class="collapsible">Assistant Camera</button>
-    <div class="content">
-      <p class="center-text">
-        Assistant Camera on the short film : "Affaire Sabrina Baptiste", by Emily Badet - @2025</p>
-  </div>
-</div>
-  <div class="collapsible-container">
-    <button class="collapsible">Art Director</button>
-    <div class="content">
-      <p class="center-text">
-        Art director on the short film : "Dark Horse", by Rayane Benzida - @2025</p>
-  </div>
-</div>
- <div class="collapsible-container">
-    <button class="collapsible">Ass. Art Director</button>
-    <div class="content">
-      <p class="center-text">
-        Assistant Art Director on the short film : "Street Boy", by François Dubé - @2024</p>
-  </div>
-</div>
- <div class="collapsible-container">
-    <button class="collapsible">Director</button>
-    <div class="content">
-      <p class="center-text">
-        Director of the short film "Memento vivere" - @2023</p>
-      <p class="center-text">
-        Director of the short film "How it feels" - @2023</p>
-      <p class="center-text">
-        Director of the short film "Heal and Rise" - @2024</p>
-  </div>
-</div>
- <div class="collapsible-container">
-    <button class="collapsible">Actress</button>
-    <div class="content">
-      <p class="center-text">
-        Lead role on the picture : 28 degrés sous la lune", by Noé Mercklé - @2023</p>
-     <p class="center-text">
-       Actress on the short film : "A Rich but Complicated Life", by Celeste Forette - @2024</p>
-      <p class="center-text">
-        Lead role on the short film "We Were Gils Together", by Coppelia Gervais - @2023</p>
-      <p class="center-text">
-        Lead role on a short film by Omar Metaich - @2024</p>
-      <p class="center-text">
-        Silhouette (Extra) on the music clip "Cohete" of singer Daniela directed by Derek Branscombe - @2025</p>
-  </div>
-</div>
- <div class="collapsible-container">
-    <button class="collapsible">Foley Artist</button>
-    <div class="content">
-      <p class="center-text">
-        Foley Artist on the short film : "Between the Silence and the Noise", by Sara Balkis - @2025</p>
-  </div>
-</div>
- <div class="collapsible-container">
-    <button class="collapsible">Ass. Director</button>
-    <div class="content">
-      <p class="center-text">
-        Assistant director on a school studio light project - @2024</p>
-  </div>
-</div>
+    <!-- PRODUCTION -->
+    <section id="production" class="page hidden">
+      <div class="content">
+        <h2>Production Manager</h2>
+        <p>Write your text here...</p>
+      </div>
+      <button class="back-btn" data-back="home">← Back</button>
+    </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <form action="https://formspree.io/f/xkgvkjla" method="POST">
-  <input type="text" name="name" placeholder="Your Name" required />
-  <input type="email" name="email" placeholder="Your Email" required />
-  <textarea name="message" placeholder="Your Message" required></textarea>
-  <button type="submit">Send</button>
-</form>
-  </section>
+    <!-- SCRIPT -->
+    <section id="script" class="page hidden">
+      <div class="content">
+        <h2>Script</h2>
+        <p>Write your text here...</p>
+      </div>
+      <button class="back-btn" data-back="home">← Back</button>
+    </section>
+
+    <!-- CAMERA -->
+    <section id="camera" class="page hidden">
+      <div class="content">
+        <h2>Assistant Camera</h2>
+        <p>Write your text here...</p>
+      </div>
+      <button class="back-btn" data-back="home">← Back</button>
+    </section>
+
+    <!-- ART -->
+    <section id="art" class="page hidden">
+      <div class="content">
+        <h2>Art Director</h2>
+        <p>Write your text here...</p>
+      </div>
+      <button class="back-btn" data-back="home">← Back</button>
+    </section>
+
+    <!-- ACTRESS -->
+    <section id="actress" class="page hidden">
+      <div class="content">
+        <h2>Actress</h2>
+        <p>Write your text here...</p>
+      </div>
+      <button class="back-btn" data-back="home">← Back</button>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="page hidden">
+      <div class="content">
+        <h2>Contact</h2>
+        <form action="https://formspree.io/f/xkgvkjla" method="POST" class="contact-form">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea name="message" placeholder="Your Message" required></textarea>
+          <button type="submit" class="send-btn">Send</button>
+        </form>
+      </div>
+      <button class="back-btn" data-back="home">← Back</button>
+    </section>
+  </main>
 
   <footer>
-    <p>© 2025 Zoé navarro</p>
+    <p>© 2025 Zoé Navarro</p>
   </footer>
 
   <script src="script.js"></script>
