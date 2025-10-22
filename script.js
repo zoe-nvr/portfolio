@@ -31,3 +31,20 @@ backButtons.forEach(btn => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 });
+// --- SKILLS SECTION INTERACTIVITY ---
+const skillButtons = document.querySelectorAll('.open-skill');
+const skillContents = document.querySelectorAll('.skill-content');
+
+skillButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const skillId = button.getAttribute('data-skill');
+    skillContents.forEach(c => c.classList.add('hidden'));
+    document.getElementById(`skill-${skillId}`).classList.remove('hidden');
+    document.querySelector('.skills-list').classList.add('hidden');
+  });
+});
+
+function closeSkill(skillId) {
+  document.getElementById(`skill-${skillId}`).classList.add('hidden');
+  document.querySelector('.skills-list').classList.remove('hidden');
+}
