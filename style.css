@@ -8,6 +8,12 @@ body {
   overflow-x: hidden;
 }
 
+main {
+  padding-top: 120px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 /* --- HEADER --- */
 header {
   position: fixed;
@@ -15,15 +21,15 @@ header {
   width: 100%;
   background: rgba(240, 234, 214, 0.85);
   backdrop-filter: blur(8px);
-  padding: 15px 0;
+  padding: 20px 0;
   z-index: 100;
+  box-shadow: 0 2px 8px rgba(128, 0, 32, 0.1);
 }
 
 h1 {
   color: #800020;
   margin: 0;
-  font-size: 2em;
-  font-family: "Times New Roman", serif;
+  font-size: 2.4em;
 }
 
 nav {
@@ -34,23 +40,18 @@ nav button {
   background: none;
   border: none;
   color: #800020;
-  margin: 0 10px;
-  font-size: 1em;
+  margin: 0 15px;
+  font-size: 1.1em;
   cursor: pointer;
-  transition: color 0.3s;
-  font-family: "Times New Roman", serif;
+  transition: color 0.3s, transform 0.2s;
 }
 
 nav button:hover {
   color: #B22222;
+  transform: translateY(-2px);
 }
 
-/* --- MAIN --- */
-main {
-  padding-top: 120px;
-}
-
-/* --- PAGE & SUBPAGE --- */
+/* --- PAGE TRANSITIONS --- */
 .page, .subpage {
   opacity: 0;
   transform: translateY(10px);
@@ -68,8 +69,9 @@ main {
 .image-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
+  gap: 15px;
   margin-top: 20px;
+  justify-content: center;
 }
 
 .image-grid img {
@@ -93,19 +95,18 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
-  margin-top: 20px;
+  gap: 15px;
+  margin-top: 25px;
 }
 
 .project-btn {
   background: #800020;
   color: #F0EAD6;
   border: none;
-  padding: 10px 20px;
+  padding: 12px 25px;
   border-radius: 20px;
   cursor: pointer;
   transition: background 0.3s, transform 0.3s;
-  font-family: "Times New Roman", serif;
 }
 
 .project-btn:hover {
@@ -121,9 +122,8 @@ main {
   padding: 8px 16px;
   border-radius: 15px;
   cursor: pointer;
-  margin-top: 20px;
+  margin-top: 25px;
   transition: background 0.3s, color 0.3s, transform 0.3s;
-  font-family: "Times New Roman", serif;
 }
 
 .back-btn:hover {
@@ -137,31 +137,27 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
-  margin-top: 20px;
-  font-family: "Times New Roman", serif;
+  gap: 12px;
+  margin-top: 25px;
 }
 
 form input, form textarea {
   width: 80%;
-  max-width: 400px;
-  padding: 10px;
+  max-width: 450px;
+  padding: 12px;
   border: none;
   border-radius: 10px;
   font-size: 1em;
-  font-family: "Times New Roman", serif;
 }
 
 form button {
   background: #800020;
   color: #F0EAD6;
   border: none;
-  padding: 10px 20px;
+  padding: 10px 22px;
   border-radius: 20px;
   cursor: pointer;
-  font-size: 1em;
   transition: background 0.3s, transform 0.3s;
-  font-family: "Times New Roman", serif;
 }
 
 form button:hover {
@@ -171,70 +167,13 @@ form button:hover {
 
 /* --- FOOTER --- */
 footer {
-  margin-top: 40px;
-  padding: 20px;
+  margin-top: 60px;
+  padding: 25px;
   background: rgba(240, 234, 214, 0.5);
   color: #800020;
-  font-family: "Times New Roman", serif;
+  font-size: 1em;
 }
 
-/* --- RESPONSIVE DESIGN --- */
-@media (max-width: 1024px) {
-  header {
-    padding: 10px 0;
-  }
-  h1 {
-    font-size: 1.8em;
-  }
-}
-
-@media (max-width: 768px) {
-  nav button {
-    display: block;
-    margin: 10px auto;
-    font-size: 1.1em;
-  }
-
-  .image-grid {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
-
-  .project-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .project-btn {
-    width: 80%;
-    max-width: 300px;
-    font-size: 1.1em;
-  }
-
-  form input, form textarea {
-    width: 90%;
-  }
-
-  footer {
-    font-size: 0.9em;
-  }
-}
-
-@media (max-width: 480px) {
-  h1 {
-    font-size: 1.6em;
-  }
-  h2 {
-    font-size: 1.3em;
-  }
-  p {
-    font-size: 1em;
-  }
-  .project-btn, .back-btn, form button {
-    font-size: 1em;
-    padding: 8px 16px;
-  }
-}
 /* --- SKILLS SECTION --- */
 .skills-list {
   display: flex;
@@ -248,7 +187,6 @@ footer {
   background: none;
   border: 1px solid #800020;
   color: #800020;
-  font-family: 'Times New Roman', serif;
   padding: 10px 20px;
   border-radius: 10px;
   transition: all 0.3s ease;
@@ -289,7 +227,6 @@ footer {
   background: none;
   border: 1px solid #800020;
   color: #800020;
-  font-family: 'Times New Roman', serif;
   padding: 10px 20px;
   border-radius: 10px;
   cursor: pointer;
@@ -301,12 +238,50 @@ footer {
   color: #f0ead6;
 }
 
-/* Hidden class for transitions */
 .hidden {
   display: none;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+/* --- RESPONSIVE DESIGN --- */
+
+/* TABLET */
+@media (max-width: 991px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  nav button {
+    margin: 8px;
+    font-size: 1em;
+  }
+
+  .image-grid {
+    grid-template-columns: 1fr;
+  }
+
+  main {
+    padding-top: 100px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.8em;
+  }
+
+  nav button {
+    display: block;
+    margin: 8px auto;
+    font-size: 1.1em;
+  }
+
+  .project-btn, .back-btn, form button {
+    font-size: 1em;
+    padding: 8px 16px;
+  }
+
+  footer {
+    font-size: 0.9em;
+  }
 }
