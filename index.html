@@ -12,6 +12,7 @@
     <nav>
       <button data-target="home">About</button>
       <button data-target="projects">Projects</button>
+      <button data-target="skills">Skills</button>
       <button data-target="contact">Contact</button>
     </nav>
   </header>
@@ -60,6 +61,48 @@
         <button class="project-btn" data-target="scenarist/writer">Scenarist/Writer</button>
       </div>
     </section>
+
+    <section id="skills" class="page">
+  <h2>Skills</h2>
+  <p>Discover some of the key abilities that shape my cinematic and creative work.</p>
+
+  <div class="skills-list">
+    <button class="open-skill" data-skill="filmmaking">Filmmaking</button>
+    <button class="open-skill" data-skill="editing">Editing</button>
+    <button class="open-skill" data-skill="screenwriting">Screenwriting</button>
+    <button class="open-skill" data-skill="iceskating">Ice Skating</button>
+  </div>
+
+  <!-- Combat Sport - Krav Maga -->
+  <div id="skill-combatsport-kravmaga" class="skill-content hidden">
+    <img src="krav.jpg" alt="krav maga skill" class="skill-image" />
+    <p>I trained Krav Maga for a year in Montreal and am level P1. I loved trainig combat sport and had a fast evolution. I am now still training techniques and strengh on my own.</p>
+    <button class="back-button" onclick="closeSkill('combatsport-kravmaga')">← Back</button>
+  </div>
+
+  <!-- Theatre -->
+  <div id="skill-theatre" class="skill-content hidden">
+    <img src="theatre.jpg" alt="theatre" class="skill-image" />
+    <p>I studied theatre for 4 years in France in a club. Althought not as acting for the screen, i enjoyed it very much and learned a lot, especially on composure and language.</p>
+    <button class="back-button" onclick="closeSkill('theatre')">← Back</button>
+  </div>
+
+  <!-- SOPFEU -->
+  <div id="skill-SOPFEU" class="skill-content hidden">
+    <img src="SOPFEU.jpg" alt="SOPFEU" class="skill-image" />
+    <p>I passed my SOPFEU training in may 2025 and am now offically a Forest Firefighter aid, combattant auxiliaire, on call.</p>
+    <p>Training included : knowledge on fire, lands, army communication methos, safety codes, physical training, getting on and off moving helicopter, usage of fire hoses and more.</p>
+    <button class="back-button" onclick="closeSkill('SOPFEU')">← Back</button>
+  </div>
+
+  <!-- Ice Skating -->
+  <div id="skill-iceskating" class="skill-content hidden">
+    <img src="iceskating.jpg" alt="ice skating still" class="skill-image" />
+    <p>I have been ice skating for now 8 years.I have worked for two years in a skating rink (Atrium le 1000) and am now giving private classes.</p>
+    <button class="back-button" onclick="closeSkill('iceskating')">← Back</button>
+  </div>
+</section>
+
 
     <!-- CONTACT -->
     <section id="contact" class="page">
