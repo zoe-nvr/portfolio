@@ -235,3 +235,78 @@ footer {
     padding: 8px 16px;
   }
 }
+/* --- SKILLS SECTION --- */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.open-skill {
+  background: none;
+  border: 1px solid #800020;
+  color: #800020;
+  font-family: 'Times New Roman', serif;
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.open-skill:hover {
+  background: #800020;
+  color: #f0ead6;
+  transform: translateY(-3px);
+}
+
+.skill-content {
+  margin-top: 40px;
+  text-align: center;
+  animation: fadeIn 0.7s ease;
+}
+
+.skill-image {
+  width: 80%;
+  max-width: 500px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 20px rgba(128, 0, 32, 0.2);
+}
+
+.skill-content p {
+  max-width: 600px;
+  margin: 0 auto;
+  color: #4b1e1e;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.back-button {
+  display: inline-block;
+  margin-top: 20px;
+  background: none;
+  border: 1px solid #800020;
+  color: #800020;
+  font-family: 'Times New Roman', serif;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.back-button:hover {
+  background: #800020;
+  color: #f0ead6;
+}
+
+/* Hidden class for transitions */
+.hidden {
+  display: none;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
