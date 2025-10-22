@@ -254,7 +254,7 @@ footer {
 /* --- RESPONSIVE DESIGN --- */
 
 /* TABLET */
-@media (max-width: 991px) {
+@media (max-width: 850px) {
   h1 {
     font-size: 2em;
   }
@@ -274,9 +274,9 @@ footer {
 }
 
 /* MOBILE */
-@media (max-width: 600px) {
+@media (max-width: 500px) {
   h1 {
-    font-size: 1.8em;
+    font-size: 1.6em;
   }
 
   nav button {
