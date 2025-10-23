@@ -319,58 +319,57 @@
   <script src="script.js"></script>
   
 <script>
-    const translations = {
-      fr: {
-        title: "À propos de moi",
-        text: "Bonjour ! Je suis Zoé Navarro, une jeune directrice de la photographie basée à Montréal."
-      },
-      en: {
-        title: "About Me",
-        text: "Hello! I'm Zoé Navarro, a young cinematographer based in Montreal."
-      },
-      es: {
-        title: "Sobre mí",
-        text: "¡Hola! Soy Zoé Navarro, una joven directora de fotografía con base en Montreal."
-      }
-    };
-
-    const flags = document.querySelectorAll('.flag');
-    const title = document.getElementById('title');
-    const text = document.getElementById('text');
-
-    const navHome = document.getElementById('nav-home');
-    const navProjects = document.getElementById('nav-projects');
-    const navSkills = document.getElementById('nav-skills');
-    const navContact = document.getElementById('nav-contact');
-
-    function changeLanguage(lang) {
-      // Effet de fondu sortant
-      title.classList.remove('show');
-      text.classList.remove('show');
-
-      setTimeout(() => {
-        // Changement du texte
-        title.textContent = translations[lang].title;
-        text.textContent = translations[lang].text;
-
-        navHome.textContent = translations[lang].nav[0];
-        navProjects.textContent = translations[lang].nav[1];
-        navSkills.textContent = translations[lang].nav[2];
-        navContact.textContent = translations[lang].nav[3];
-
-
-        // Effet de fondu entrant
-        title.classList.add('show');
-        text.classList.add('show');
-      }, 300);
+document.addEventListener("DOMContentLoaded", () => {
+  const translations = {
+    fr: {
+      title: "À propos de moi",
+      text: "Bonjour ! Je suis Zoé Navarro, une jeune directrice de la photographie basée à Montréal.",
+      nav: ["Accueil", "Projets", "Compétences", "Contact"]
+    },
+    en: {
+      title: "About Me",
+      text: "Hello! I'm Zoé Navarro, a young cinematographer based in Montreal.",
+      nav: ["About", "Projects", "Skills", "Contact"]
+    },
+    es: {
+      title: "Sobre mí",
+      text: "¡Hola! Soy Zoé Navarro, una joven directora de fotografía con base en Montreal.",
+      nav: ["Inicio", "Proyectos", "Habilidades", "Contacto"]
     }
+  };
 
-    flags.forEach(flag => {
-      flag.addEventListener('click', () => {
-        const lang = flag.getAttribute('data-lang');
-        changeLanguage(lang);
+  const flags = document.querySelectorAll(".flag");
+  const title = document.getElementById("title");
+  const text = document.getElementById("text");
+
+  // Sélectionne les boutons du menu
+  const navButtons = document.querySelectorAll("nav button");
+
+  function changeLanguage(lang) {
+    title.classList.remove("show");
+    text.classList.remove("show");
+
+    setTimeout(() => {
+      title.textContent = translations[lang].title;
+      text.textContent = translations[lang].text;
+
+      // Change le texte des boutons de menu
+      navButtons.forEach((btn, i) => {
+        btn.textContent = translations[lang].nav[i];
       });
-    });
-  </script>
+
+      title.classList.add("show");
+      text.classList.add("show");
+    }, 300);
+  }
+
+  flags.forEach(flag => {
+    flag.addEventListener("click", () => {
+      const lang = flag.getAttribute("data-lang");
+      changeLanguage(lang);
+     });
+   });
+ });
+ </script>
 </body>
 </html>
