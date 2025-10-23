@@ -5,6 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Zoé Navarro - Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* === LANG SWITCHER === */
+    .lang-switcher {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      position: absolute;
+      top: 15px;
+      right: 20px;
+    }
+
+    .lang-switcher .flag {
+      cursor: pointer;
+      font-size: 1.5rem;
+      transition: transform 0.2s ease;
+    }
+
+    .lang-switcher .flag:hover {
+      transform: scale(1.2);
+    }
+
+    /* Animation de fondu */
+    .fade {
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    .fade.show {
+      opacity: 1;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -15,19 +47,28 @@
       <button data-target="skills">Skills</button>
       <button data-target="contact">Contact</button>
     </nav>
+
+    <!-- 🌍 Sélecteur de langue -->
+    <div class="lang-switcher">
+      <span class="flag" data-lang="fr">🇫🇷</span>
+      <span class="flag" data-lang="en">🇬🇧</span>
+      <span class="flag" data-lang="es">🇪🇸</span>
+    </div>
   </header>
 
   <main>
     <!-- HOME -->
     <section id="home" class="page active">
-      <h2>About Me</h2>
-      <p>Hello! I'm Zoé Navarro, a young cinematographer based in Montreal.</p>
+      <h2 id="title" class="fade show">About Me</h2>
+      <p id="text" class="fade show">Hello! I'm Zoé Navarro, a young cinematographer based in Montreal.</p>
+
       <div class="image-grid">
         <img src="IMG_1.HEIC" alt="Photo 1">
         <img src="IMG_2.HEIC" alt="Photo 2">
         <img src="IMG_5.HEIC" alt="Photo 3">
         <img src="IMG_6.jpg" alt="Photo 4">
       </div>
+      
       <p>Now located in Montreal, i grew up in France, in a little village of the Alps.</p>
       <p>There, i studied cinema for 3 years in my "audiovisuel" section in high school.</p>
       <p>While mostly studying how to create an image and how to write a scenario, i also tried relentlessly</p>
@@ -276,5 +317,60 @@
   </footer>
 
   <script src="script.js"></script>
+  
+<script>
+    const translations = {
+      fr: {
+        title: "À propos de moi",
+        text: "Bonjour ! Je suis Zoé Navarro, une jeune directrice de la photographie basée à Montréal."
+      },
+      en: {
+        title: "About Me",
+        text: "Hello! I'm Zoé Navarro, a young cinematographer based in Montreal."
+      },
+      es: {
+        title: "Sobre mí",
+        text: "¡Hola! Soy Zoé Navarro, una joven directora de fotografía con base en Montreal."
+      }
+    };
+
+    const flags = document.querySelectorAll('.flag');
+    const title = document.getElementById('title');
+    const text = document.getElementById('text');
+
+    const navHome = document.getElementById('nav-home');
+    const navProjects = document.getElementById('nav-projects');
+    const navSkills = document.getElementById('nav-skills');
+    const navContact = document.getElementById('nav-contact');
+
+    function changeLanguage(lang) {
+      // Effet de fondu sortant
+      title.classList.remove('show');
+      text.classList.remove('show');
+
+      setTimeout(() => {
+        // Changement du texte
+        title.textContent = translations[lang].title;
+        text.textContent = translations[lang].text;
+
+        navHome.textContent = translations[lang].nav[0];
+        navProjects.textContent = translations[lang].nav[1];
+        navSkills.textContent = translations[lang].nav[2];
+        navContact.textContent = translations[lang].nav[3];
+
+
+        // Effet de fondu entrant
+        title.classList.add('show');
+        text.classList.add('show');
+      }, 300);
+    }
+
+    flags.forEach(flag => {
+      flag.addEventListener('click', () => {
+        const lang = flag.getAttribute('data-lang');
+        changeLanguage(lang);
+      });
+    });
+  </script>
 </body>
 </html>
